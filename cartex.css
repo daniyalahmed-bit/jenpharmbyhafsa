@@ -1,0 +1,81 @@
+/* Basic styling */
+body {
+     margin: 0;
+     font-family: sans-serif;
+}
+
+header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem;
+     background-color: #f4f4f4;
+}
+
+.cart-btn {
+     background: none;
+     border: none;
+     font-size: 1.5rem;
+     cursor: pointer;
+     position: relative;
+}
+
+#cart-count {
+     position: absolute;
+     top: -5px;
+     right: -10px;
+     background-color: red;
+     color: white;
+     border-radius: 50%;
+     padding: 2px 6px;
+     font-size: 0.8rem;
+}
+
+/* Cart Panel Styling */
+.cart-overlay {
+     position: fixed;
+     /* Fixed position to overlay the content */
+     top: 0;
+     right: 0;
+     width: 0;
+     /* Initially hide by setting width to 0 or display:none */
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     /* Semi-transparent background */
+     overflow-x: hidden;
+     /* Hide horizontal scrollbar */
+     transition: 0.5s;
+     /* Smooth transition effect */
+     z-index: 1;
+     /* Stay on top of other elements */
+}
+
+.cart-content {
+     position: relative;
+     right: -300px;
+     /* Position off-screen */
+     width: 300px;
+     background-color: white;
+     padding: 20px;
+     height: 100%;
+     transition: right 0.5s;
+}
+
+/* Class added by JavaScript to show the cart */
+.cart-overlay.active {
+     width: 100%;
+     /* Expands the overlay to cover the screen */
+}
+
+.cart-content.active {
+     right: 0;
+     /* Slides the cart panel into view */
+}
+
+.close-cart {
+     position: absolute;
+     top: 10px;
+     right: 20px;
+     font-size: 2rem;
+     cursor: pointer;
+}

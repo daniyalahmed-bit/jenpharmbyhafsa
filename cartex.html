@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Toggle Cart</title>
+     <link rel="stylesheet" href="CSS/jenpharm products.css">
+     <link rel="stylesheet" href="CSS/cartex.css">
+</head>
+
+<body>
+     <header>
+          <h1>My Store</h1>
+          <!-- Cart Icon/Button -->
+          <button id="cart-icon" class="cart-btn">
+               🛒 <span id="cart-count">0</span>
+          </button>
+     </header>
+
+     <!-- Cart Overlay/Panel -->
+     <div id="cart-panel" class="cart-overlay">
+          <div class="cart-content">
+               <span class="close-cart" id="close-cart-btn">&times;</span>
+               <h2>Shopping Cart</h2>
+               <ul id="cart-items">
+                    <!-- Cart items will be dynamically added here by JavaScript -->
+               </ul>
+               <p>Total: Rs.<span id="cart-total">0</span></p>
+               <button class="buy-now">Buy Now</button>
+          </div>
+     </div>
+
+     <main>
+          <!-- Your main product content goes here -->
+          <p>Products list...</p>
+        
+     </main>
+
+     <script src="script.js"></script>
+</body>
+
+</html>
